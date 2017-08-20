@@ -9,52 +9,45 @@
     <menu>
       <p>table des matières</p>
       <ul>
-        <li><a href="#install">Installation</a>
         <li><a href="#usage">Usage</a>
           <ul>
             <li><a href="#source">Source</a></li>
             <li><a href="#reference">Références</a></li>
           </ul>
         </li>
+        <li><a href="#localization">Localisation</a>
+        <li><a href="#install">(Installation)</a>
         <li><a href="#licence">Licence</a></li>
       </ul>
     </menu>
     <aside>
-		<div class="spinner" id='spinner'></div>
-		<div class="emscripten" id="status">Downloading...</div>
-
-		<div class="emscripten">
-		  <progress value="0" max="100" id="progress" hidden=1></progress>
-		</div>
-
-		
-		<div class="emscripten_border">
-		  <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-		</div>
-		<textarea id="output" rows="8"></textarea>
+      <div class="spinner" id='spinner'></div>
+      <div class="emscripten" id="status">Downloading...</div>
+      
+      <div class="emscripten">
+      <progress value="0" max="100" id="progress" hidden=1></progress>
+      </div>
+      
+      
+      <div class="emscripten_border">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+      </div>
+      <textarea id="output" rows="8"></textarea>
     </aside>
   </nav>
   <header>
-  	<video width="320" height="240">
-	</video>
+    <video width="320" height="180" autoplay="autoplay">
+      <source src="style/video/0001-3258.h264.webm" type="video/webm" />
+    </video>
     <h1 id="welcome">Dot Machine<a href="#welcome">&#x00B6;</a></h1>
     <p>
-      <a href="https://github.com/jb255/Dot-machine">DotMachine</a> est un <b>tetris</b> écrit en C pour le microcontrôleur <a href="https://www.microchip.com/wwwproducts/en/PIC32MX170F256B">PIC32MX170F256B</a>.
+      <a href="https://github.com/jb255/Dot-machine">DotMachine</a> est un <b>tableau tetris</b> écrit en C et de microcontrôleur <a href="https://www.microchip.com/wwwproducts/en/PIC32MX170F256B">PIC32MX170F256B</a>.
     </p>
     <p>
     À des fins démonstratifs, ce programme fût étendu aux interfaces Unix/Linux, Darwin et Web sous les modes <a href="https://fr.wikipedia.org/wiki/Environnement_en_mode_texte">texte</a> -TUI- et <a href="https://fr.wikipedia.org/wiki/Interface_graphique">graphique</a> -GUI-.
     </p>
   </header>
   <article>
-    <h2 id="install">Installation<a href="#install">&#x00B6;</a></h2>
-        <p>Pour plus de détails, consulter la branche <a href="https://github.com/jb255/tree/software">software</a> :</p>
-        <pre>
-<span class="command">git</span> <span class="option">clone</span> <span class="option">-b</span> <span class="value">software</span> <span class="value">https://github.com/jb255/Dot-machine.git</span> <span class="value">dot_machine</span>
-<span class="command">cd</span> <span class="value">dot_machine</span>
-
-<span class="command">make</span> <span class="option">default</span> && <span class="command">./main</span> # vt100/tui 
-<span class="command">make</span> <span class="option">sdl2</span> && <span class="command">./main</span> # sdl2/gui
-<span class="command">make</span> <span class="option">emcc</span> && <span class="command">firefox</span> <span class="option">index.html</span> # sdl2/web </pre>
     <h2 id="usage">usage<a href="#usage">&#x00B6;</a></h2>
 	<p>Liste de touches :</p>
 	<table>
@@ -116,6 +109,21 @@
         <li><a href="http://www.gamesdatabase.org/Media/SYSTEM/Nintendo_NES/manual/Formated/Tetris_-_1988_-_Tengen_Ltd..pdf">Guide Nintendo du Tetris de 1988</a></li>
         <li><a href="https://flipdots.com/wp-content/uploads/2016/10/electromagnetic_status_indicators.pdf">Fiche technique de la pastille AZ36</a></li>
     </ul>
+
+    <h2 id="localization">Localisation<a href="#localization">&#x00B6;</a></h2>
+    <p>Ce tableau est accessible sous <a href="http://art42.fr/fr/visites.html">réservation</a> au musée d'Art de l'École 42 au 96 Boulevard Bessières, Paris.</p>
+    <div id="map"></div>
+    <h2 id="install">(Installation)<a href="#install">&#x00B6;</a></h2>
+        <p>Pour plus de détails, consulter la branche <a href="https://github.com/jb255/tree/software">software</a> :</p>
+        <pre>
+<span class="command">git</span> <span class="option">clone</span> <span class="option">-b</span> <span class="value">software</span> <span class="value">https://github.com/jb255/Dot-machine.git</span> <span class="value">dot_machine</span>
+<span class="command">cd</span> <span class="value">dot_machine</span>
+
+<span class="command">make</span> <span class="option">default</span> && <span class="command">./main</span> # vt100/tui 
+<span class="command">make</span> <span class="option">sdl2</span> && <span class="command">./main</span> # sdl2/gui
+<span class="command">make</span> <span class="option">asmjs</span> && <span class="command">firefox</span> <span class="option">index.html</span> # emcc/asmjs sdl2/web
+<span class="command">make</span> <span class="option">wasm</span> && <span class="command">firefox</span> <span class="option">index.html</span> # emcc/web-assembly sdl2/web </pre>
+
   </article>
   <footer>
     <h2 id="licence">licence<a href="#licence">&#x00B6;</a></h2>
@@ -124,6 +132,27 @@
     </p>
   </footer>
 </section>
+
+    <script src="http://openlayers.org/en/v3.11.2/build/ol.js"></script>
+
+    <script>
+    
+  var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    target: 'map',
+    view: new ol.View({
+      center: ol.proj.fromLonLat([2.3186119, 48.8964050]),
+      zoom: 19,
+    })
+  });
+
+    </script>
+
 
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');

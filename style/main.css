@@ -15,6 +15,17 @@
   color: rgba(72, 58, 170, 1);
 }
 
+h1, h2, h3, h4, h5, h6, p, a, tr, img {
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 h1::after,
 h2::after,
 h3::after,
@@ -37,38 +48,6 @@ h6::after {
   font-size: 1.3cm;
   background-color: white;
   color: black;
-}
-
-#welcome:target::after {
-  content: "welcome";
-  animation: visible 10s linear 1 normal;
-  opacity: 0;
-}
-
-#usage:target::after {
-  content: "usage";
-  animation: visible 10s linear 1 normal;
-  opacity: 0;
-}
-#docker:target::after {
-  content: "docker = marcel";
-  animation: visible 10s linear 1 normal;
-  opacity: 0;
-}
-#cli:target::after {
-  content: "python image2font --help";
-  animation: visible 10s linear 1 normal;
-  opacity: 0;
-}
-#license:target::after {
-  content: "by @limaconoob and @adjivas";
-  animation: visible 10s linear 1 normal;
-  opacity: 0;
-}
-#dependencies:target::after {
-  content: "Wikipedia \2665";
-  animation: visible 10s linear 1 normal;
-  opacity: 0;
 }
 
 body {
@@ -112,10 +91,15 @@ nav aside {
   width: 100%;
   text-align: center;
   color: rgba(120, 166, 171, 0.4);
+  z-index: 25;
 }
 
 nav aside:hover {
   color: rgba(120, 166, 171, 1.0);
+}
+
+section header {
+  z-index: 50;
 }
 
 section header h1 {
@@ -175,6 +159,7 @@ article {
   position: relative;
   display: block;
   width: 100%;
+  z-index: 50;
 }
 
 article pre {
@@ -281,10 +266,22 @@ section header p:first-letter, article p:first-letter, footer p:first-letter {
   text-transform: capitalize
 }
 
-video {
+article video {
 	background-color: black
+}
+
+nav canvas {
+	opacity: 0.2;
+}
+
+nav canvas:hover {
+        opacity: 1;
 }
 
 #spinner, #status, #progress, #output {
 	display: none;
+}
+
+.ol-overlaycontainer-stopevent {
+    display: none;
 }
