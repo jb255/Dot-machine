@@ -1,0 +1,27 @@
+*.aux
+*.log
+*.toc
+*.dot
+*.out
+*.fls
+*.fdb_latexmk
+*.cache
+
+# Makefile
+*-a4-dot2tex-fig*.tex
+*-c5-dot2tex-fig*.tex
+
+# VIM
+*.swp
+*.swo
+*.doc.tex.swn
+*.doc.tex.swm
+*.doc.tex.swl
+
+# OS X
+*.DS_Store
+*._.DS_Store
+*.nfs.*
+
+# Tex
+_minted-*-a4/
