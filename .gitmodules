@@ -1,0 +1,16 @@
+[submodule "hardware"]
+	path = hardware
+	url = https://github.com/jb255/Dot-machine.git
+	branch = hardware
+[submodule "software"]
+	path = software
+	url = https://github.com/jb255/Dot-machine.git
+	branch = software
+[submodule "documentation"]
+	path = documentation
+	url = https://github.com/jb255/Dot-machine.git
+	branch = documentation
+[submodule "emscripten"]
+	path = emscripten
+	url = https://github.com/jb255/Dot-machine.git
+	branch = emscripten
