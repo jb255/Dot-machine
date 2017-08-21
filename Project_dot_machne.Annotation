@@ -1,0 +1,26 @@
+[DesignatorManager]
+LogicalDesignator0=UEXT1
+LogicalPartID0=1
+DocumentName0=ProtoBoard.SchDoc
+ChannelName0=ProtoBoard
+UniqueID0=\UWMNVBYY
+PhysicalDesignator0=*
+PhysicalDesignatorLocked0=0
+
+[SheetNumberManager]
+SheetNumberOrder=Display Order
+SheetNumberMethod=Increasing
+DocumentName0=pic32mx270f256b.SchDoc
+UniqueIDPath0=
+SheetNumber0=
+DocumentName1=Power.SchDoc
+UniqueIDPath1=
+SheetNumber1=
+DocumentName2=ProtoBoard.SchDoc
+UniqueIDPath2=
+SheetNumber2=
+DocumentName3=Sheet1.SchDoc
+UniqueIDPath3=
+SheetNumber3=
+
+

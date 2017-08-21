@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=Sheet1.SchDoc
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=Sheet1.SchDoc|Designator=pcb|SchDesignator=pcb|FileName=PIC.SchDoc|SymbolType=Normal|RawFileName=PIC.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=Sheet1.SchDoc|Designator=pcb|SchDesignator=pcb|FileName=conectic_to_girouette.SchDoc|SymbolType=Normal|RawFileName=conectic_to_girouette.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|Record=SheetSymbol|SourceDocument=Sheet1.SchDoc|Designator=Power|SchDesignator=Power|FileName=Power.SchDoc|SymbolType=Normal|RawFileName=Power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

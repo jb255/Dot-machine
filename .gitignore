@@ -1,45 +1,43 @@
+# Altium
+History
+__Previews
+Project Logs for Project_dot_machne/
+Project Outputs for Free Documents/
+Project Outputs for Project_dot_machne/
+
 # Vim
 *.swp
-*.swo
-*.swn
-*.swm
-*.swl
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Mac
+.DS_Store
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-
-# Bin
-main
-test*
-!tests/
+# Jaustry
+PIC.SchDoc
+PCB_Dot.PcbDoc
+Potard.SchLib
+pic32mx270f256b.SchDoc:x
+Battery.PcbLib
+LED.SchDoc
+Main.PcbLib
+PCB3.PcbDoc
+PCB4.PcbDoc
+PCB5.PcbDoc
+PCB6.PcbDoc
+PCB_TP3.PcbDoc
+TP-2_PIC32.SchLib
+TP-II-the_suite.PrjPcb
+TP-II-the_suite.PrjPcbStructure
+TP-II.OutJob
+TP-II.PcbLib
+TP-II.SchDoc
+TP-II.SchLib
+TP-III.CMP
+TP-III.PcbLib
+TP-III_PIC32.PcbLib
+TP-II_AP1117.SchLib
+TP-II_ENABLE.SchDoc
+TP-II_PD.SchLib
+TP-II_PIC.CMP
+TP-II_PIC.SchDoc
+TP-II_POWER.SchDoc
